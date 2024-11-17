@@ -51,6 +51,9 @@ const update = async (req, res) => {
     const { email, name } = req.body
     try {
         const userId = parseInt(req.params.userId);
+        const exist = await getUserByEmail(email)
+
+
         if (!email
             ||
             !name
@@ -58,6 +61,12 @@ const update = async (req, res) => {
             return res
                 .status(400)
                 .json({ message: "Your payload body is empty!" });
+        }
+        if (!exist
+        ) {
+            return res
+                .status(400)
+                .json({ message: "User not found!" });
         }
         const newUpdateUser = await updateUserById(userId, req.body);
 

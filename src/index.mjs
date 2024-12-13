@@ -44,12 +44,12 @@ app.use('/api/v1', async (req, res, next) => {
 });
 
 // Handle 404
-app.use((req, res) => {
-    res.status(404).json({
-        message: 'Not Found',
-        path: req.path
-    });
-});
+// app.use((req, res) => {
+//     res.status(404).json({
+//         message: 'Not Found',
+//         path: req.path
+//     });
+// });
 
 // app.listen(process.env.PORT, () => {
 //     console.log(`Server is running on http://localhost:${process.env.PORT}`);

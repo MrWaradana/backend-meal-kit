@@ -31,6 +31,8 @@ app.use((err, req, res, next) => {
     });
 });
 
+app.use(prefix, router);
+
 // app.use(prefix, router);
 // Wrap all routes in try-catch
 app.use('/api/v1', async (req, res, next) => {

@@ -12,9 +12,6 @@
       "destination": "src/index.mjs"
     }
   ],
-  "env": {
-    "PORT": "3000"
-  },
   "headers": [
     {
       "source": "/(.*)",

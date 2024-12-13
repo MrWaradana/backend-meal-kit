@@ -19,6 +19,10 @@ app.use(bodyParser.json());
 
 app.use(prefix, router);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on http://localhost:${process.env.PORT}`);
-});
+// app.listen(process.env.PORT, () => {
+//     console.log(`Server is running on http://localhost:${process.env.PORT}`);
+// });
+
+// Remove the app.listen() part for Vercel deployment
+// Instead, export the app
+export default app;
